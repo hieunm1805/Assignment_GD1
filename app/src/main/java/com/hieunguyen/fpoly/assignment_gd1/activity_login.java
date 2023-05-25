@@ -37,17 +37,29 @@ public class activity_login extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent data = new Intent();
-                data.putExtra("number", 0);
+                data.putExtra("number", 18);
 
                 setResult(RESULT_OK, data);
-                finish();
+                onBackPressed();
             }
         });
+
         btnDangnhap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), activity_QLNS.class);
-                startActivity(intent);
+                String username = edtUsername.getText().toString().trim();
+                String password = edtPassword.getText().toString().trim();
+
+                if (username.equals("") && password.equals("")) {
+                    Toast.makeText(activity_login.this, "Không được để trống tài khoản, mật khẩu", Toast.LENGTH_SHORT).show();
+                } else if (username.equals("")) {
+                    Toast.makeText(activity_login.this, "Không được để trống tài khoản", Toast.LENGTH_SHORT).show();
+                } else if (password.equals("")) {
+                    Toast.makeText(activity_login.this, "Không được để trống mật khẩu", Toast.LENGTH_SHORT).show();
+                } else {
+                    Intent intent = new Intent(getApplicationContext(), activity_QLNS.class);
+                    startActivity(intent);
+                }
             }
         });
 

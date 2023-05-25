@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center"
+    tools:context=".activity_register">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chào mừng bạn đã trở lại,"
+        android:textSize="20sp"
+        android:textColor="#2196F3"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Vui lòng đăng nhập để tiếp tục"
+        android:layout_marginBottom="25dp"
+        android:textStyle="bold"
+        android:textSize="26sp"
+        android:textColor="#2C2C2C"/>
+
+    <EditText
+        android:id="@+id/edt_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:hint="Nhập username"/>
+
+    <EditText
+
+        android:id="@+id/edt_password"
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập password"/>
+
+    <CheckBox
+        android:id="@+id/chk_remember"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ghi nhớ tài khoản"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_dangNhap"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:backgroundTint="#09F420"
+            android:text="ĐĂNG NHẬP"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_dangKy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:backgroundTint="#F45B09"
+            android:text="ĐĂNG KÝ"/>
+    </LinearLayout>
+
+</LinearLayout>
